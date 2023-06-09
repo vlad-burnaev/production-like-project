@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // тут неважно, т.к. собирать будем через webpack
+    "outDir": "./dist/",
+    // подсвечиваем места, где не указан тип
+    "noImplicitAny": true,
+    // тип модульной сборки
+    "module": "ESNext",
+    // в какую версию компилируем: для поддержки большинства браузеров
+    "target": "es5",
+    // позволяет использовать jsx
+    "jsx": "react-jsx",
+    // компилятор будет обрабатывать не только ts файлы, но и js
+    "allowJs": true,
+    "moduleResolution": "node",
+    // позволяет require() заменить на import
+    "esModuleInterop": true,
+    // позволяет заменить import * as webpack на import webpack
+    "allowSyntheticDefaultImports": true,
+    // для абсолютных импортов
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "compilerOptions": {
+      // для того, чтобы работали импорты через import
+      "module": "CommonJS"
+    }
+  }
+}
