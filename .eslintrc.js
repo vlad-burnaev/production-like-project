@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'standard-with-typescript',
@@ -29,6 +30,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
   },
   globals: {
     __IS_DEV__: true,
