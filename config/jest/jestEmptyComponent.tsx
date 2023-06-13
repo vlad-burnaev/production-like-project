@@ -2,4 +2,4 @@ const jestEmptyComponent = function () {
   return <div />
 }
 
-export default jestEmptyComponent;
+export default jestEmptyComponent
