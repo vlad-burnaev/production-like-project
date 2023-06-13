@@ -32,6 +32,14 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     'max-len': ['error', { ignoreComments: true, code: 120 }],
   },
+  overrides: [
+    {
+      files: ['**/*.test.tsx', '**/*.test.ts'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
   globals: {
     __IS_DEV__: true,
   },

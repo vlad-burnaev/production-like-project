@@ -1,6 +1,6 @@
 import cls from './Sidebar.module.scss'
 import { useState } from 'react'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { LangSwitcher, ThemeSwitcher } from 'shared/ui'
 import { useTranslation } from 'react-i18next'
 
@@ -15,8 +15,8 @@ export const Sidebar = (props: SidebarProps) => {
   const onToggle = () => { setCollapsed(prev => !prev) }
 
   return (
-        <aside className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <button onClick={onToggle}>{t('Переключить')}</button>
+        <aside data-testid="sidebar" className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+            <button data-testid="sidebar-toggle" onClick={onToggle}>{t('Переключить')}</button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />

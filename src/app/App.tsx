@@ -1,5 +1,5 @@
 import './styles/index.scss'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import { Navbar, Sidebar } from 'widgets'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { AppRouter } from 'app/providers'

@@ -28,5 +28,11 @@
       // для того, чтобы работали импорты через import
       "module": "CommonJS"
     }
-  }
+  },
+  // для работы импортов в jest
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }
