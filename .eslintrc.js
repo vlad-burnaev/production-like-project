@@ -8,6 +8,7 @@ module.exports = {
     'standard-with-typescript',
     'plugin:react/recommended',
     'plugin:i18next/recommended',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -17,10 +18,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'react',
-    'i18next',
-  ],
+  plugins: ['react', 'i18next'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
@@ -30,16 +28,17 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'max-len': ['error', {
+      ignoreComments: true,
+      code: 120,
+    }],
   },
-  overrides: [
-    {
-      files: ['**/*.test.tsx', '**/*.test.ts'],
-      rules: {
-        'i18next/no-literal-string': 'off',
-      },
+  overrides: [{
+    files: ['**/*.test.tsx', '**/*.test.ts'],
+    rules: {
+      'i18next/no-literal-string': 'off',
     },
-  ],
+  }],
   globals: {
     __IS_DEV__: true,
   },
