@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Loader } from "shared/ui/Loader";
+import { Loader } from 'shared/ui/Loader'
 
 const meta = {
   title: 'shared/Loader',
   component: Loader,
-  tags: [ 'autodocs' ],
+  tags: ['autodocs'],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof Loader>;
+} satisfies Meta<typeof Loader>
 
 export default meta
 type Story = StoryObj<typeof meta>
