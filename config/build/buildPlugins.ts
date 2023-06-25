@@ -20,9 +20,6 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
       __IS_DEV__: isDev,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
   ]
 
   if (isDev) {
@@ -30,6 +27,9 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
       // по-дефолту HMR плохо работает с react компоненами
       new ReactRefreshPlugin(),
       new webpack.HotModuleReplacementPlugin(),
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
     ]
 
     plugins.concat(devPlugins)
