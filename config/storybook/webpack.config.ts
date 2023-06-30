@@ -16,7 +16,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
   // отключаем дефолтный svg loader storybook
   config.module.rules = config.module.rules.map((rule: webpack.RuleSetRule) => {
-    // @ts-ignore
+    // @ts-expect-error
     if (/svg/i.test(rule.test)) {
       return { ...rule, exclude: /\.svg$/i }
     }
