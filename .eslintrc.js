@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
   ],

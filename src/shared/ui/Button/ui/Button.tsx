@@ -4,6 +4,7 @@ import { type ButtonHTMLAttributes, type FC } from 'react'
 
 export enum ButtonTheme {
   Clear = 'clear',
+  ClearInverted = 'clearInverted',
   Outline = 'outline',
   Background = 'background',
   BackgroundInverted = 'backgroundInverted',
