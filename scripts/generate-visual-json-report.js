@@ -1,3 +1,5 @@
+// скрипт для визуализации diff-а в скриншотных loki тестах
+// https://github.com/oblador/loki/issues/76
 const { promisify } = require('util')
 const { readdir, writeFile } = require('fs')
 const { join: joinPath, relative } = require('path')

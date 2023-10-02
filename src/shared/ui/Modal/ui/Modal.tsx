@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib'
 import cls from './Modal.module.scss'
 import React, { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from 'shared/ui/Portal/Portal'

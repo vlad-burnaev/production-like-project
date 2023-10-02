@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib'
 import { Navbar, Sidebar } from 'widgets'
 import { AppRouter } from 'app/providers'
 import { Suspense } from 'react'

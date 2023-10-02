@@ -1,11 +1,8 @@
-import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Navbar.module.scss'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink'
 import { useTranslation } from 'react-i18next'
-import { Button } from 'shared/ui'
-import { Modal } from 'shared/ui/Modal'
+import { Button, ButtonTheme, Modal, AppLink, AppLinkTheme } from 'shared/ui'
+import { classNames } from 'shared/lib'
 import { useState } from 'react'
-import { ButtonTheme } from 'shared/ui/Button'
 
 interface NavbarProps {
   className?: string

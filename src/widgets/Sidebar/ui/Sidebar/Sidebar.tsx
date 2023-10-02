@@ -1,6 +1,6 @@
 import cls from './Sidebar.module.scss'
 import { useState } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib'
 import { AppLink, Button, LangSwitcher, ThemeSwitcher } from 'shared/ui'
 import { ButtonTheme } from 'shared/ui/Button'
 import { ButtonSize } from 'shared/ui/Button/ui/Button'

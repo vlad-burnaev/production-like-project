@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { Counter } from 'entities/Counter'
-import { componentRender } from 'shared/lib/tests/componentRender'
+import { componentRender } from 'shared/lib'
 
 describe('Counter', () => {
   test('render', () => {
@@ -34,7 +34,7 @@ describe('Counter', () => {
         value: 42,
       },
     }
-    componentRender(<Counter />, {
+    componentRender(<Counter/>, {
       initialState,
     })
     fireEvent.click(screen.getByTestId('decrement-btn'))
