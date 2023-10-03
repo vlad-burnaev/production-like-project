@@ -1,8 +1,9 @@
 import cls from './Navbar.module.scss'
 import { useTranslation } from 'react-i18next'
-import { Button, ButtonTheme, Modal, AppLink, AppLinkTheme } from 'shared/ui'
+import { Button, ButtonTheme } from 'shared/ui'
 import { classNames } from 'shared/lib'
 import { useState } from 'react'
+import { LoginModal } from 'features/AuthByUsername'
 
 interface NavbarProps {
   className?: string
@@ -10,25 +11,25 @@ interface NavbarProps {
 export const Navbar = (props: NavbarProps) => {
   const { className } = props
   const { t } = useTranslation()
+
   const [isAuthModal, setIsAuthModal] = useState(false)
-  const onToggleModal = () => {
-    setIsAuthModal(!isAuthModal)
+  const onCloseAuthModal = () => {
+    setIsAuthModal(false)
+  }
+  const onOpenAuthModal = () => {
+    setIsAuthModal(true)
   }
 
   return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
                 <Button
-                    onClick={onToggleModal}
+                    onClick={onOpenAuthModal}
                     theme={ButtonTheme.ClearInverted}
                 >
                   {t('Войти')}
                 </Button>
-                <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                  {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, ratione.')}
-                </Modal>
-                <AppLink theme={AppLinkTheme.Secondary} to={'/'} className={cls.mainLink}>{t('Главная')}</AppLink>
-                <AppLink theme={AppLinkTheme.Secondary} to={'/about'}>{t('О Сайте')}</AppLink>
+                <LoginModal isOpen={isAuthModal} onClose={onCloseAuthModal} />
             </div>
         </div>
   )

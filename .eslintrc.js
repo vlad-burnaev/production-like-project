@@ -22,6 +22,7 @@ module.exports = {
   plugins: ['react', 'i18next'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/display-name': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
