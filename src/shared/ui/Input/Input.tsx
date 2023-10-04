@@ -17,6 +17,7 @@ export const Input = memo((props: InputProps) => {
     type = 'text',
     placeholder,
     autoFocus,
+    children,
     ...otherProps
   } = props
 
