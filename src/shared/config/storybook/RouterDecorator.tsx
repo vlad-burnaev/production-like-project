@@ -4,7 +4,7 @@ import React, { Suspense } from 'react'
 import { PageLoader } from 'widgets/PageLoader'
 
 // eslint-disable-next-line react/display-name
-export const RouterDecoracor = () => (Story: StoryFn) => (
+export const RouterDecorator = () => (Story: StoryFn) => (
     <BrowserRouter>
       <Suspense fallback={<PageLoader />}>
         <Story />

@@ -40,6 +40,7 @@ export default {
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    axios: 'axios/dist/node/axios.cjs',
   },
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!

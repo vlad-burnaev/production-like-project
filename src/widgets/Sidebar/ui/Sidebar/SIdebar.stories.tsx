@@ -2,15 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Navbar } from 'widgets'
+import { Sidebar } from 'widgets'
 
 const meta = {
-  title: 'widgets/Navbar',
-  component: Navbar,
+  title: 'widgets/Sidebar',
+  component: Sidebar,
   tags: ['autodocs'],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof Navbar>
+} satisfies Meta<typeof Sidebar>
 
 export default meta
 type Story = StoryObj<typeof meta>
