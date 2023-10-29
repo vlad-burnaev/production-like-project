@@ -1,5 +1,6 @@
 import { AppLink, AppLinkTheme } from './AppLink'
 import { Button, ButtonTheme } from './Button'
+import { Text, TextTheme } from './Text'
 import { Modal } from './Modal'
 import { LangSwitcher } from './LangSwitcher'
 import { ThemeSwitcher } from './ThemeSwitcher'
@@ -10,6 +11,8 @@ export {
   AppLinkTheme,
   Button,
   ButtonTheme,
+  Text,
+  TextTheme,
   Input,
   Modal,
   LangSwitcher,

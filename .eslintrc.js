@@ -30,6 +30,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/no-dynamic-delete': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 120,
