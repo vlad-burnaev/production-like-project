@@ -31,6 +31,9 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/no-dynamic-delete': 'off',
+    '@typescript-eslint/no-invalid-void-type': ['warn'],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
     'max-len': ['error', {
       ignoreComments: true,
       code: 120,
@@ -44,5 +47,6 @@ module.exports = {
   }],
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
 }

@@ -1,7 +1,8 @@
 import { classNames } from 'shared/lib'
 import cls from './Modal.module.scss'
-import React, { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import React, { type MutableRefObject, type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from 'shared/ui/Portal/Portal'
+import { type Mods } from 'shared/lib/classNames/classNames'
 
 const ANIMATION_DELAY = 300
 
@@ -17,7 +18,7 @@ export const Modal = (props: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-  const timerRef = useRef(null)
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
 
   const handleClose = useCallback(() => {
     if (onClose) {
@@ -56,7 +57,7 @@ export const Modal = (props: ModalProps) => {
     e.stopPropagation()
   }
 
-  const mods = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
   }

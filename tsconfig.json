@@ -18,6 +18,7 @@
     // позволяет заменить import * as webpack на import webpack
     "allowSyntheticDefaultImports": true,
     // для абсолютных импортов
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
