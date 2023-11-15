@@ -4,11 +4,12 @@ import { type ButtonHTMLAttributes, memo, type ReactNode } from 'react'
 import { type Mods } from 'shared/lib/classNames/classNames'
 
 export enum ButtonTheme {
-  Clear = 'clear',
-  ClearInverted = 'clearInverted',
-  Outline = 'outline',
-  Background = 'background',
-  BackgroundInverted = 'backgroundInverted',
+  CLEAR = 'clear',
+  CLEAR_INVERTED = 'clear_inverted',
+  OUTLINE = 'outline',
+  OUTLINE_RED = 'outline_red',
+  BACKGROUND = 'background',
+  BACKGROUND_INVERTED = 'background_inverted',
 }
 
 export enum ButtonSize {
@@ -28,7 +29,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = memo((props: ButtonProps) => {
   const {
     className,
-    theme = ButtonTheme.Outline,
+    theme = ButtonTheme.OUTLINE,
     square = false,
     size = ButtonSize.M,
     disabled = false,

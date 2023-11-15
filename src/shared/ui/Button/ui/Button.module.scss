@@ -5,14 +5,14 @@
 }
 
 .clear,
-.clearInverted {
+.clear_inverted {
     padding: 0;
     border: 0;
     background: none;
     outline: none;
 }
 
-.clearInverted {
+.clear_inverted {
     color: var(--inverted-primary-color);
 }
 
@@ -22,13 +22,19 @@
     background: none;
 }
 
+.outline_red {
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);
     border: none;
 }
 
-.backgroundInverted {
+.background_inverted {
     background: var(--inverted-bg-color);
     color: var(--secondary-color);
     border: none;

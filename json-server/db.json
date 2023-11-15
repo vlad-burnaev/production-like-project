@@ -1,12 +1,32 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server", "author": "typicode" },
-    { "id": "2", "title": "json-server", "author": "typicode" },
-    { "id": "3", "title": "json-server", "author": "typicode" },
-    { "id": "4", "title": "json-server", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": "1" }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -16,11 +36,11 @@
     }
   ],
   "profile": {
-    "firstname": "Влад",
-    "lastname": "Бурнаев",
-    "age": 26,
-    "currency": "RUB",
-    "country": "Russia",
+    "firstname": "Влад1231232341111",
+    "lastname": "Бурнаев12312312311111",
+    "age": 261,
+    "currency": "USD",
+    "country": "Ukraine",
     "city": "Moscow",
     "username": "admin",
     "avatar": "https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-1024.png"
