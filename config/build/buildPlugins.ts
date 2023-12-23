@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function buildPlugins ({ paths, isDev, apiURL }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins ({ paths, isDev, apiURL, project }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HTMLWebpackPlugin({
       // файл index.html из public будет использоваться как шаблон для добавления div.root
@@ -19,6 +19,7 @@ export function buildPlugins ({ paths, isDev, apiURL }: BuildOptions): webpack.W
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiURL),
+      __PROJECT__: JSON.stringify(project),
     }),
     new webpack.HotModuleReplacementPlugin(),
   ]

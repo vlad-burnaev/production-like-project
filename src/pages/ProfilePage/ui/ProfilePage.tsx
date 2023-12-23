@@ -76,8 +76,12 @@ const ProfilePage = (props: ProfilePageProps) => {
     dispatch(profileActions.updateData({ country }))
   }, [dispatch])
 
+  console.log('__PROJECT__', __PROJECT__)
+
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   return (
